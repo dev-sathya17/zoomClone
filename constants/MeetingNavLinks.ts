@@ -1,4 +1,17 @@
-export const meetingNavLinks = [
+export interface MeetingNavLink {
+  title: string;
+  description: string;
+  icon: string;
+  color: string;
+  type?:
+    | "isScheduleMeeting"
+    | "isJoiningMeeting"
+    | "isInstantMeeting"
+    | undefined;
+  isRecording?: boolean;
+}
+
+export const meetingNavLinks: MeetingNavLink[] = [
   {
     title: "New Meeting",
     description: "Start an instant meeting.",

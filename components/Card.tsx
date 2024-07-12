@@ -15,7 +15,7 @@ interface CardType {
     description: string;
     icon: string;
     color: string;
-    type:
+    type?:
       | "isScheduleMeeting"
       | "isJoiningMeeting"
       | "isInstantMeeting"
