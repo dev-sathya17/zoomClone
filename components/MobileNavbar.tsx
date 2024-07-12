@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/sheet";
 import Image from "next/image";
 import Link from "next/link";
-import { sidebarLinks } from "@/constants";
+import { sidebarLinks } from "@/constants/SideBarLinks";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
@@ -33,10 +33,10 @@ const MobileNavbar = () => {
               src="/icons/logo.svg"
               width={32}
               height={32}
-              alt="Boom logo"
+              alt="Yoom logo"
               className="max-sm:size-10"
             />
-            <p className="text-[26px] font-extrabold text-white">Boom</p>
+            <p className="text-[26px] font-extrabold text-white">Yoom</p>
           </Link>
           <div className="flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto">
             <SheetClose asChild>
