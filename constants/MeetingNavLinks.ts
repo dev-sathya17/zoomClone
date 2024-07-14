@@ -20,24 +20,24 @@ export const meetingNavLinks: MeetingNavLink[] = [
     type: "isInstantMeeting",
   },
   {
-    title: "Join Meeting",
-    description: "via an invitation link",
-    icon: "/icons/join-meeting.svg",
-    color: "bg-blue-1",
-    type: "isJoiningMeeting",
-  },
-  {
     title: "Schedule Meeting",
     description: "Plan your meeting.",
     icon: "/icons/schedule.svg",
-    color: "bg-purple-1",
+    color: "bg-blue-1",
     type: "isScheduleMeeting",
   },
   {
     title: "View Recordings",
     description: "Check out your recordings.",
     icon: "/icons/recordings.svg",
-    color: "bg-yellow-1",
+    color: "bg-purple-1",
     isRecording: true,
+  },
+  {
+    title: "Join Meeting",
+    description: "via an invitation link",
+    icon: "/icons/join-meeting.svg",
+    color: "bg-yellow-1",
+    type: "isJoiningMeeting",
   },
 ];
