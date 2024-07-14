@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "./ui/textarea";
 import ReactDatePicker from "react-datepicker";
+import { Input } from "./ui/input";
 
 const MeetingNavbar = () => {
   const [meetingType, setMeetingType] = useState<
@@ -32,7 +33,6 @@ const MeetingNavbar = () => {
       | undefined
   ) => {
     setMeetingType(type);
-    console.log(type);
   };
 
   const createMeeting = async () => {
@@ -144,6 +144,20 @@ const MeetingNavbar = () => {
         buttonText="Start Meeting"
         handleClick={createMeeting}
       />
+      <Modal
+        isOpen={meetingType === "isJoiningMeeting"}
+        onClose={() => setMeetingType(undefined)}
+        title="Enter link here:"
+        className="text-center"
+        buttonText="Join Meeting"
+        handleClick={() => router.push(values.link)}
+      >
+        <Input
+          placeholder="Enter meeting link"
+          className="border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0"
+          onChange={(e) => setValues({ ...values, link: e.target.value })}
+        />
+      </Modal>
     </section>
   );
 };

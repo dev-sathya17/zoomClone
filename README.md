@@ -1,4 +1,4 @@
-# Zoom Clone App using Next.js, TypeScript, ShadCN
+# Zoom Clone App using Next.js, TypeScript, ShadCN, Stream, Clerk
 
 # Concepts:
 
