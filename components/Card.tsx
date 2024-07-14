@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 interface CardType {
   handleClick: (
@@ -35,8 +36,15 @@ const Card = ({ link, handleClick }: CardType) => {
       onClick={
         link.isRecording ? () => navigate() : () => handleClick(link.type)
       }
-      className={`${link.color} px-4 py-6 flex flex-col justify-between w-full xl:max-w-[270px] min-h-[260px] 
-      rounded-[14px] cursor-pointer`}
+      className={cn(
+        "px-4 py-6 flex flex-col justify-between w-full xl:max-w-[270px] min-h-[260px] rounded-[14px] cursor-pointer",
+        {
+          "bg-orange-1": link.color === "bg-orange-1",
+          "bg-blue-1": link.color === "bg-blue-1",
+          "bg-purple-1": link.color === "bg-purple-1",
+          "bg-yellow-1": link.color === "bg-yellow-1",
+        }
+      )}
     >
       <div className="flex-center glassmorphism size-12 rounded-[10px]">
         <Image src={link.icon} width={27} height={27} alt={link.title} />
